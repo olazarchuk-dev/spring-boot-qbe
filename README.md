@@ -30,7 +30,7 @@ SELECT t from Customer c where c.firstName = '%dra';
 - Lombok
 - H2
 
-# API (s)
+# API
 1. Get All customers
 	http://localhost:8080/customer/list
 2. Get all customers whose first name ends with 
