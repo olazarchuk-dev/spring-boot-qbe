@@ -26,8 +26,6 @@ SELECT t from Customer c where c.firstName = '%dra';
 * **(**`Repo-2`**)**: https://github.com/talk2debendra/spring-boot/tree/master/spring-boot-qbe
 
 # Technologies
-- Spring Boot: 11
-- Spring Boot: 2.2.0.RELEASE
 - Spring Boot data JPA
 - Lombok
 - H2
