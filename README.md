@@ -20,10 +20,10 @@ var example = Example.of(customers, matcher);
 SELECT t from Customer c where c.firstName = '%dra';
 ````
 
-* `Tutorial`: https://talk2debendra90.medium.com/spring-data-jpa-query-by-example-qbe-a9c817248c0d
-* `Tutorial-2`: https://www.baeldung.com/spring-data-query-by-example
-* `Repo`: https://github.com/talk2debendra/spring-boot/tree/master/spring-boot-qbe
-* `Repo-2`: https://github.com/spring-projects/spring-data-examples/tree/main/jpa/query-by-example
+* `Tutorial`: https://www.baeldung.com/spring-data-query-by-example
+* **(**`Tutorial-2`**)**: https://talk2debendra90.medium.com/spring-data-jpa-query-by-example-qbe-a9c817248c0d
+* `Repo`: https://github.com/spring-projects/spring-data-examples/tree/main/jpa/query-by-example
+* **(**`Repo-2`**)**: https://github.com/talk2debendra/spring-boot/tree/master/spring-boot-qbe
 
 # Technologies
 - Spring Boot: 11
