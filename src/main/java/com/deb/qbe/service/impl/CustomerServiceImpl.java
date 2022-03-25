@@ -19,13 +19,17 @@ import lombok.extern.log4j.Log4j2;
 @Service
 @Log4j2
 public class CustomerServiceImpl implements CustomerService {
-	
+
 	@Autowired
 	private CustomerRepository customerRepository;
-	
+
+	@Override
+	public List<Customers> getAll() {
+		return customerRepository.findAll();
+	}
+
 	@Override
 	public List<Customers> findByFirstNameEnding(String ending) {
-
 		var customerFilter = Customers.builder().firstName(ending).build();
 		var matcherFilter = ExampleMatcher.matching()
 				.withIgnoreNullValues()
@@ -43,11 +47,6 @@ public class CustomerServiceImpl implements CustomerService {
 
 		var filter = Example.of(customerFilter, matcherFilter);
 		return customerRepository.findAll(filter);
-	}
-
-	@Override
-	public List<Customers> getAll() {
-		return customerRepository.findAll();
 	}
 
 	@Override
