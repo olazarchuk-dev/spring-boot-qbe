@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
-@ComponentScan(basePackages = {"com.deb.qbe.*"})
 @EnableJpaRepositories
 @SpringBootApplication
 public class SpringBootQbeApplication {
