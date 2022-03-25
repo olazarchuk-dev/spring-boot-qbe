@@ -68,7 +68,6 @@ public class CustomerServiceImpl implements CustomerService {
 
 		var filter = Example.of(customerFilter, matcherFilter);
 		return customerRepository.findAll(filter);
-
 	}
 	
 }
