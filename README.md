@@ -12,7 +12,7 @@ var customers = Customers.builder().firstName(ending).build();
 var matcher = ExampleMatcher.matching()
              .withIgnoreNullValues()
              .withMatcher("firstName", 
-                    match ->match.endsWith().ignoreCase(true));
+                          match -> match.endsWith().ignoreCase(true));
 var example = Example.of(customers, matcher);
 ```
 По умолчанию поля, имеющие нулевые значения, игнорируются в базовом запросе, поэтому приведенный выше пример будет эквивалентен следующему **JPQL**:
