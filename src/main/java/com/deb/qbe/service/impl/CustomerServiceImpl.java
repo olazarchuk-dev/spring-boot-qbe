@@ -13,20 +13,19 @@ import com.deb.qbe.model.Customers;
 import com.deb.qbe.repository.CustomerRepository;
 import com.deb.qbe.service.CustomerService;
 
-import lombok.var;
 import lombok.extern.log4j.Log4j2;
 
 
 @Service
 @Log4j2
-public class CustomerServiceImpl implements CustomerService{
+public class CustomerServiceImpl implements CustomerService {
 	
 	@Autowired
 	private CustomerRepository customerRepository;
 	
 	@Override
 	public List<Customers> findByFirstNameEnding(String ending) {
-		
+
 		var customers = Customers.builder().firstName(ending).build();
 		var matcher = ExampleMatcher.matching()
 				.withIgnoreNullValues()

@@ -16,15 +16,15 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+@Data
 @Entity
 @Table(name = "customers")
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
 @Builder
-public class Customers implements Serializable{
+public class Customers implements Serializable {
 
 	private static final long serialVersionUID = 34131213L;
 
