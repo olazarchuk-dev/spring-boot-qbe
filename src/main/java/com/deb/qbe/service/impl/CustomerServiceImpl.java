@@ -32,7 +32,7 @@ public class CustomerServiceImpl implements CustomerService {
 				.withMatcher("firstName", match -> match.endsWith().ignoreCase(true));
 
 		var filter = Example.of(customerFilter, matcherFilter);
-		return (List<Customers>) customerRepository.findAll(filter);
+		return customerRepository.findAll(filter);
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class CustomerServiceImpl implements CustomerService {
 				.withMatcher("lastName", match -> match.endsWith().ignoreCase());
 
 		var filter = Example.of(customerFilter, matcherFilter);
-		return (List<Customers>) customerRepository.findAll(filter);
+		return customerRepository.findAll(filter);
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class CustomerServiceImpl implements CustomerService {
 				.withMatcher("firstName", exact().ignoreCase());
 
 		var filter = Example.of(customerFilter, matcherFilter);
-		return (List<Customers>) customerRepository.findAll(filter);
+		return customerRepository.findAll(filter);
 	}
 
 	@Override
@@ -67,7 +67,7 @@ public class CustomerServiceImpl implements CustomerService {
 				.withMatcher("walletBalance", exact());
 
 		var filter = Example.of(customerFilter, matcherFilter);
-		return (List<Customers>) customerRepository.findAll(filter);
+		return customerRepository.findAll(filter);
 
 	}
 	
