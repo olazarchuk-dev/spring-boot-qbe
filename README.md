@@ -30,12 +30,6 @@ SELECT t from Customer c where c.firstName = '%dra';
 - Lombok
 - H2
 
-
-# How to run
-- Run the application as Springboot application
-- While application start-up, it will inser the data from data-h2.sql 
-
-
 # API (s)
 1. Get All customers
 	http://localhost:8080/customer/list
