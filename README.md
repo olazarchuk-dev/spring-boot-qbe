@@ -1,6 +1,6 @@
 # Spring Data JPA + Query By Example (QBE)
 
-### Illustrates the query by example(QBE) feature of Spring data JPA.
+### Иллюстрация выполнeния запроса на Query By Example (QBE) в Spring Data JPA
 
 `Query By Example (QBE)` — это удобный для разработчиков метод запросов, который упрощает написание динамических запросов без какого-либо специального языка запросов.
 
