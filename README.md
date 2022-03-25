@@ -2,7 +2,8 @@
 
 ### Иллюстрация выполнения sql-запроса на Query By Example (QBE) в Spring Data JPA
 
-`Query By Example (QBE)` — это удобный для разработчиков метод запросов, который упрощает написание динамических запросов без какого-либо специального языка запросов.
+`Query By Example (QBE)` — это удобный для разработчиков метод sql-запросов, который упрощает написание динамических sql-запросов без какого-либо специального языка sql-запросов
+и позволяет нам выполнять sql-запросы на основе экземпляра-Entity.
 
 Это позволяет нам выполнять запросы в **Spring Data JPA** на основе экземпляра объекта **org.springframework.data.domain.Example**.
 ```java
@@ -20,7 +21,9 @@ SELECT t from Customer c where c.firstName = '%dra';
 ````
 
 * `Tutorial`: https://talk2debendra90.medium.com/spring-data-jpa-query-by-example-qbe-a9c817248c0d
+* `Tutorial-2`: https://www.baeldung.com/spring-data-query-by-example
 * `Repo`: https://github.com/talk2debendra/spring-boot/tree/master/spring-boot-qbe
+* `Repo-2`: https://github.com/spring-projects/spring-data-examples/tree/main/jpa/query-by-example
 
 # Technologies
 - Spring Boot: 11
@@ -48,5 +51,9 @@ SELECT t from Customer c where c.firstName = '%dra';
 	http://localhost:8080/customer/balance?balance=5000
 
 
+---
 
-
+Example usage for org.springframework.data.domain Example of:
+* https://www.logicbig.com/tutorials/spring-framework/spring-data/query-by-example.html
+* http://www.java2s.com/example/java-api/org/springframework/data/domain/example/of-2-3.html
+* https://www.programcreek.com/java-api-examples/?api=org.springframework.data.domain.Example
