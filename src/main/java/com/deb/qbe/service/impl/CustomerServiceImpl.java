@@ -26,23 +26,23 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public List<Customers> findByFirstNameEnding(String ending) {
 
-		var customers = Customers.builder().firstName(ending).build();
-		var matcher = ExampleMatcher.matching()
+		var customerFilter = Customers.builder().firstName(ending).build();
+		var matcherFilter = ExampleMatcher.matching()
 				.withIgnoreNullValues()
 				.withMatcher("firstName", match -> match.endsWith().ignoreCase(true));
 
-		var example = Example.of(customers, matcher);
-		return (List<Customers>) customerRepository.findAll(example);
+		var filter = Example.of(customerFilter, matcherFilter);
+		return (List<Customers>) customerRepository.findAll(filter);
 	}
 
 	@Override
 	public List<Customers> findByLastNameEnding(String ending) {
-		var customers = Customers.builder().lastName(ending).build();
-		var matcher = ExampleMatcher.matching()
+		var customerFilter = Customers.builder().lastName(ending).build();
+		var matcherFilter = ExampleMatcher.matching()
 				.withMatcher("lastName", match -> match.endsWith().ignoreCase());
 
-		var example = Example.of(customers, matcher);
-		return (List<Customers>) customerRepository.findAll(example);
+		var filter = Example.of(customerFilter, matcherFilter);
+		return (List<Customers>) customerRepository.findAll(filter);
 	}
 
 	@Override
@@ -52,22 +52,22 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public List<Customers> findByFirstName(String firstName) {
-		var customers = Customers.builder().firstName(firstName).build();
-		var matcher = ExampleMatcher.matching()
+		var customerFilter = Customers.builder().firstName(firstName).build();
+		var matcherFilter = ExampleMatcher.matching()
 				.withMatcher("firstName", exact().ignoreCase());
 
-		var example = Example.of(customers, matcher);
-		return (List<Customers>) customerRepository.findAll(example);
+		var filter = Example.of(customerFilter, matcherFilter);
+		return (List<Customers>) customerRepository.findAll(filter);
 	}
 
 	@Override
 	public List<Customers> findByWalletBalanceEquals(Long balance) {
-		var customers = Customers.builder().walletBalance(balance).build();
-		var matcher = ExampleMatcher.matching()
+		var customerFilter = Customers.builder().walletBalance(balance).build();
+		var matcherFilter = ExampleMatcher.matching()
 				.withMatcher("walletBalance", exact());
 
-		var example = Example.of(customers, matcher);
-		return (List<Customers>) customerRepository.findAll(example);
+		var filter = Example.of(customerFilter, matcherFilter);
+		return (List<Customers>) customerRepository.findAll(filter);
 
 	}
 	
