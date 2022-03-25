@@ -1,6 +1,23 @@
-# Spring Data JPA Query By Example
+# Spring Data JPA + Query By Example (QBE)
 
-Illustrates the query by example(QBE) feature of Spring data JPA. 
+### Illustrates the query by example(QBE) feature of Spring data JPA.
+
+`Query By Example (QBE)` — это удобный для разработчиков метод запросов, который упрощает написание динамических запросов без какого-либо специального языка запросов.
+
+Это позволяет нам выполнять запросы в **Spring Data JPA** на основе экземпляра объекта **org.springframework.data.domain.Example**.
+```java
+//get all the customers whose first name is ending with 'dra' 
+var customers = Customers.builder().firstName(ending).build();
+var matcher = ExampleMatcher.matching()
+             .withIgnoreNullValues()
+             .withMatcher("firstName", 
+                    match ->match.endsWith().ignoreCase(true));
+var example = Example.of(customers, matcher);
+```
+По умолчанию поля, имеющие нулевые значения, игнорируются в базовом запросе, поэтому приведенный выше пример будет эквивалентен следующему **JPQL**:
+````sql
+SELECT t from Customer c where c.firstName = '%dra';
+````
 
 * `Tutorial`: https://talk2debendra90.medium.com/spring-data-jpa-query-by-example-qbe-a9c817248c0d
 * `Repo`: https://github.com/talk2debendra/spring-boot/tree/master/spring-boot-qbe
