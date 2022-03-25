@@ -6,7 +6,8 @@ Illustrates the query by example(QBE) feature of Spring data JPA.
 * `Repo`: https://github.com/talk2debendra/spring-boot/tree/master/spring-boot-qbe
 
 # Technologies
-- Spring Boot
+- Spring Boot: 11
+- Spring Boot: 2.2.0.RELEASE
 - Spring Boot data JPA
 - Lombok
 - H2
