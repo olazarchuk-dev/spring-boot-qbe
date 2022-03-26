@@ -20,6 +20,7 @@ var example = Example.of(customers, matcher);
 SELECT t from Customer c where c.firstName = '%dra';
 ````
 
+* [Spring Data JPA - Using ExampleMatcher to customize Query by Example](https://www.logicbig.com/tutorials/spring-framework/spring-data/query-example-matchers.html)
 * `Tutorial`: https://www.baeldung.com/spring-data-query-by-example
 * **(**`Tutorial-2`**)**: https://talk2debendra90.medium.com/spring-data-jpa-query-by-example-qbe-a9c817248c0d
 * `Repo`: https://github.com/spring-projects/spring-data-examples/tree/main/jpa/query-by-example
@@ -49,3 +50,7 @@ Example usage for org.springframework.data.domain Example of:
 * https://www.logicbig.com/tutorials/spring-framework/spring-data/query-by-example.html
 * http://www.java2s.com/example/java-api/org/springframework/data/domain/example/of-2-3.html
 * https://www.programcreek.com/java-api-examples/?api=org.springframework.data.domain.Example
+* [Usage Query by Example](https://github.com/spring-projects/spring-data-commons/blob/main/src/main/asciidoc/query-by-example.adoc)
+
+* [Using Specifications API](https://dimitr.im/writing-dynamic-queries-with-spring-data-jpa)
+* [Spring data Specification динамический фильтр](https://habr.com/ru/sandbox/95575)
